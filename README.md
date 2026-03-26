@@ -1,29 +1,93 @@
-Progetto Arduino – Anno 2025/2026
+# 🚦 Progetti Arduino - Semaforo
 
-Classe:4AI
+Questo repository contiene una serie di esercizi realizzati con Arduino su Tinkercad.
 
-📋 Indice
+## 📂 Contenuto
 
-[Led Blink]
+* 🔴 **ledblinkZocchiTommaso**
+  LED che lampeggia ogni secondo.
 
-[Semaforo]
+* 🟡 **incrocio4ZocchiTommaso**
+  Simulazione di un incrocio con due semafori.
 
-[Semaforo con Pulsante]
+* 🟢 **semaforoZocchiTommaso**
+  Semaforo base con sequenza:
 
-[Incrocio]
+  ```
+  ROSSO → VERDE → GIALLO
+  ```
 
-1. Led Blink
+* 🔵 **semaforoPulsanteZocchiTommaso**
+  Semaforo con pulsante pedonale.
 
-Far lampeggiare un LED a intervalli regolari.
+---
 
-2. Semaforo
+## ⚙️ Componenti utilizzati
 
-Simulazione di un semaforo con tre LED (rosso, giallo, verde) che si alternano automaticamente.
+* Arduino UNO
+* Breadboard
+* LED (rosso, giallo, verde)
+* Resistenze (220Ω)
+* Pulsante (solo per ultimo esercizio)
+* Cavi jumper
 
-3. Semaforo con Pulsante
+---
 
-Semaforo che cambia stato alla pressione di un pulsante.
+## 🔌 Collegamenti base
 
-4. Incrocio
+* LED rosso → pin 13
+* LED giallo → pin 12
+* LED verde → pin 11
+* Pulsante → pin 2
 
-Simulazione di un incrocio con 4 semafori sincronizzati. I semafori opposti si comportano allo stesso modo, alternandosi con quelli perpendicolari
+---
+
+## 💡 Funzionamento
+
+### 🔴 LED Blink
+
+Il LED si accende e si spegne ogni secondo usando `delay()`.
+
+### 🚦 Semaforo base
+
+Il sistema segue la sequenza:
+
+1. Rosso acceso
+2. Verde acceso
+3. Giallo acceso
+
+### 🚸 Semaforo con pulsante
+
+* Il verde resta acceso normalmente
+* Quando si preme il pulsante:
+
+  * si attiva il giallo
+  * poi il rosso per permettere l’attraversamento
+
+### ➕ Incrocio
+
+Due semafori lavorano in alternanza:
+
+* Uno verde mentre l’altro è rosso
+* Cambio sincronizzato con giallo
+
+---
+
+## 🧠 Obiettivi didattici
+
+* Uso di `pinMode`, `digitalWrite`, `digitalRead`
+* Gestione dei tempi con `delay()`
+* Logica dei semafori
+* Input da pulsante
+
+---
+
+## 👨‍💻 Autore
+
+**Tommaso Zocchi**
+
+---
+
+## 🛠️ Note
+
+Progetti realizzati su Tinkercad per esercitazione scolastica.
