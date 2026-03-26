@@ -1,32 +1,28 @@
-void setup() {
-int Ledrosso = 13;
-int Ledgiallo = 11;
-int Ledverde = 10;
-
+int rosso = 13;
+int giallo = 12;
+int verde = 11;
 
 void setup() {
-  pinMode(Ledrosso, OUTPUT);
-  pinMode(Ledgiallo, OUTPUT);
-  pinMode(Ledverde, OUTPUT);
+  pinMode(rosso, OUTPUT);
+  pinMode(giallo, OUTPUT);
+  pinMode(verde, OUTPUT);
 }
 
 void loop() {
+  // ROSSO
+  digitalWrite(rosso, HIGH);
+  delay(5000);
+  digitalWrite(rosso, LOW);
 
-    digitalWrite(Ledrosso, HIGH);
-    digitalWrite(Ledgiallo, LOW);
-    digitalWrite(Ledverde, LOW);
+  // VERDE
+  digitalWrite(verde, HIGH);
+  delay(5000);
+  digitalWrite(verde, LOW);
 
-    delay(3000);
-
-    digitalWrite(Ledrosso, LOW);
-    digitalWrite(Ledgiallo, HIGH);
-    digitalWrite(Ledverde, LOW);
-
-    delay(1000);
-
-    digitalWrite(Ledrosso, LOW);
-    digitalWrite(Ledgiallo, LOW);
-    digitalWrite(Ledverde, HIGH);
-
+  // GIALLO
+  digitalWrite(giallo, HIGH);
+  delay(2000);
+  digitalWrite(giallo, LOW);
+}
     delay(3000);
   }
